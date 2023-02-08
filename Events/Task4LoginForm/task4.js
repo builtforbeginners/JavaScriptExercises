@@ -1,6 +1,6 @@
 /*
 Task 4
-Create a log in page with fields: username, password and a submit button On click,
+Create a to log in page with fields: username, password and a submit button On click,
 if the fields are not entered, add red outline.If the fields are all entered, display a confirmation
 message asking the user if he is sure.
     If he confirms display a success pop up and redirect the user to home.
@@ -10,18 +10,9 @@ logged in at least once, always redirect to home
 */
 
 
-// TODO: Доколку сум на index.html да не ме редиректира пак на истата и
-//       ако сум најавен има во localStorage записи да ме носи на home.html
+let passwordElement = document.getElementById('inputPassword');
 
-
-var passwordElement = document.getElementById('inputPassword');
-
-console.log(window.location.hostname);
-
-if(window.location.href !== "index.html"){
-    if(!localStorage.getItem("password") || !localStorage.getItem("user"))
-        window.location = "index.html";
-}
+redirectMe(window.location.pathname);
 
 function submitForm() {
     let username = document.getElementById('inputUsername').value;
@@ -49,4 +40,18 @@ function validationPassword() {
         document.getElementById('errorPassword').style.display = 'block';
     else
         document.getElementById('errorPassword').style.display = 'none';
+}
+
+function redirectMe(path) {
+    switch (path.split("/").pop()) {
+        case 'index.html':
+            localStorage.getItem("password") && localStorage.getItem("user")  ? window.location = "home.html" : false;
+            break;
+        case 'home.html':
+            !localStorage.getItem("password") || !localStorage.getItem("user") ? window.location = "index.html" : false;
+            break;
+        default:
+            console.log("ERROR REDIRECT");
+            break;
+    }
 }

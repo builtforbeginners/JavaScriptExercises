@@ -1,3 +1,5 @@
+// TODO: Done
+
 const regularPrice = 10;
 const overtimePrice = 15;
 let inputField = document.getElementsByTagName("input");
