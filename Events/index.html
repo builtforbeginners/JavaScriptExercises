@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="Task4LoginForm/main.css">
+</head>
+<body>
+    <div>
+        <p>Task 1</p>
+        <p id="showText">Create an application with a text and a Read More button. </p>
+        <button id="showMore" onclick="showMoreText()">Show more</button>
+    </div>
+
+    <div id="task2">
+        <p>Task 2 </p>
+        <p>Create an application with 2 input fields for entering numbers. When clicking a button, display their average and empty out the values. Disable click if values are empty</p>
+        <input type="text" id="firstNumber" onkeyup="disableButton()" placeholder="first number"> </br>
+        <input type="text" id="secondNumber" onkeyup="disableButton()" placeholder="secodn number">  </br>
+        <button id="calcAvg" onclick="calcAvg()" disabled>Calc average</button>
+        <p id="showResult"></p>
+    </div>
+
+    <div id="task3">
+       <img src="image/image1.jpg" width="600px" height="400px" id="changeImage"> <br/>
+        <button onclick="changeImage()">Change image</button>
+    </div>
+
+    <div id="task4">
+        <img src="" width="600px" height="400px" id="resizeImage"> <br/>
+        <button onclick="changeImage()">Change image</button>
+    </div>
+
+    <div id="task5">
+        <ul class="Ingredients1"> Ingredients 1
+            <li>Sugar</li>
+            <li>Milk</li>
+            <li>Eggs</li>
+        </ul>
+        <br/>
+        <ul class="Ingredients2"> Ingredients 2
+            <li onclick="selectItem(event)">Sugar</li>
+            <li onclick="selectItem(event)">Milk</li>
+            <li onclick="selectItem(event)">Eggs</li>
+        </ul>
+    </div>
+
+    <div id="task6">
+        Task 5   <br/>
+        When clicking a list item, change its text color to red to indicate the selected one. <br/>
+        Always have only one item with red color text.  <br/>
+        If you select another item, change the text color to red, and return it to black for the previous one. <br/>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

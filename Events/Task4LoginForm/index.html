@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<p>Task 4
+  Create a log in page with fields: username, password and a submit button On click,
+  if the fields are not entered, add red outline.If the fields are all entered, display a confirmation
+  message asking the user if he is sure.
+  If he confirms display a success pop up and redirect the user to home.
+  Store the user in localStorage, and on refresh read the data, if he has
+  logged in at least once, always redirect to home
+  * add a password validation (8 digits, one *....)</p>
+
+<div id="task7">
+
+  <label for="inputUsername">User name</label><br/>
+  <input type="text" id="inputUsername" /><br/>
+  <label for="inputPassword">Password</label><br/>
+  <input type="password" id="inputPassword" onkeyup="validationPassword()" /> <br/><br/>
+  <button id="btnLogin" onclick="submitForm()">Login</button>
+
+  <div id="errorList">
+    <p>Корисничкото име не е пополнето</p>
+    <p>Лозинката не е пополнета</p>
+  </div>
+  <div id="errorPassword">
+    <p>Лозинката мора да биде поголема од 8 карактери</p>
+  </div>
+
+</div>
+
+<script src="task4.js"></script>
+</body>
+</html>

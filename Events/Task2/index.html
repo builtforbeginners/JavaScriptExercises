@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<p>
+    Create a Weekly Salary calculator<br/>
+    Let the user enter his working hours from Monday – Sunday (6 input fields)<br/>
+    When clicking submit, calculate his salary:<br/>
+    <ul>
+        <li>A worker earns $10 an hour for the first 8 hours.</li>
+        <li>For every overtime hour, he earns $15.</li>
+        <li>On weekends, the employer pays double the usual rate. 10 hours worked on a weekday would pay 80+30 = $110, but on a weekend it would pay $220.</li>
+    </ul>
+</p>
+
+    <label for="monday">Monday</label>
+    <input type="text" id="monday" name="monday"> <br/>
+    <label for="tuesday">Tuesday</label>
+    <input type="text" id="tuesday" name="tuesday"> <br/>
+    <label for="wednesday">Wednesday</label>
+    <input type="text" id="wednesday" name="wednesday"> <br/>
+    <label for="thursday">Thursday</label>
+    <input type="text" id="thursday" name="thursday"> <br/>
+    <label for="friday">Friday</label>
+    <input type="text" id="friday" name="friday"> <br/>
+    <label for="saturday">Saturday</label>
+    <input type="text" id="saturday" name="saturday"> <br/>
+    <button onclick="calcSalary()">Пресметај плата</button>
+
+
+<script src="script.js"></script>
+</body>
+</html>

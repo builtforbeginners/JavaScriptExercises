@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<p>
+    <b>Task 1</b><br/>
+    Create an application with 2 inputs for entering name and surname. After clicking submit display them in a table. <br/>
+    The table can have max 5 users When entering the next values, remove the last row and add the new user on the top of the table.<br/>
+    <ul>
+        <li>Validate fields  </li>
+        <li>On each row, add a remove button </li>
+    </ul>
+
+</p>
+
+<label for="inputName">Name</label><br/>
+<input type="text" id="inputName" /><br/>
+<label for="inputSurname">Surname</label><br/>
+<input type="text" id="inputSurname"/> <br/><br/>
+<button id="btnAdd" onclick="insertTable()">ADD</button>
+<p id="displayMessage">Полоњата мора да бидат пополнети</p>
+<div id="table"></div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

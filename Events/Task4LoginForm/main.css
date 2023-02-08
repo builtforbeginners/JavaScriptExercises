@@ -1,0 +1,14 @@
+#task7{
+    width: 300px;
+    height: 300px;
+}
+
+#errorList{
+    color: red;
+    display: none;
+}
+
+#errorPassword{
+    color: red;
+    display: none;
+}
