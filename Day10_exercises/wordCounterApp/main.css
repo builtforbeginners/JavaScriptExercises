@@ -1,0 +1,13 @@
+article{
+    display: inline;
+}
+
+#txtarea{
+    display: inline;
+}
+
+#displayMessage{
+    display: inline;
+    color: red;
+    margin-left: 5px;
+}
