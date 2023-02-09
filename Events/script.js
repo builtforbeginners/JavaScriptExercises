@@ -10,7 +10,7 @@ function showMoreText() {
 function calcAvg() {
     let firstNumber = Number(document.getElementById('firstNumber').value);
     let secondNumber = Number(document.getElementById('secondNumber').value);
-    let sum = firstNumber+secondNumber; //TODO: divide by 2 
+    let sum = (firstNumber+secondNumber) / 2; //TODO: divide by 2
     document.getElementById('showResult').innerText += "\n" + sum;
     document.getElementById('firstNumber').value = '';
     document.getElementById('secondNumber').value = '';
@@ -19,15 +19,7 @@ function calcAvg() {
 /*--------*/
 
 function disableButton(){
-    if (document.getElementById('firstNumber').value == '' || document.getElementById('secondNumber').value == '')
-    {
-        document.getElementById('calcAvg').disabled = true;
-    }
-    else{
-        document.getElementById('calcAvg').disabled = false;
-    }
-    //TODO: or:
-   // document.getElementById('calcAvg').disabled = document.getElementById('firstNumber').value == '' || document.getElementById('secondNumber').value == '';
+    document.getElementById('calcAvg').disabled = document.getElementById('firstNumber').value == '' || document.getElementById('secondNumber').value == '';
 }
 
 let imageShow = document.getElementById('changeImage');
