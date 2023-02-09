@@ -30,20 +30,27 @@ let count=0;
 
 function insertTable()
 {
+    //TODO: change like this:
+    // if (!firstName.value || !lastName.value) {
+    //     document.getElementById('displayMessage').style.opacity = "1";
+    //     return;
+    // }
+    // continue with the code without the below if
+
     if(firstName.value && lastName.value)
     {
-        count++;
+        count++; // TODO: you can use the table children array to check how many items you have, don't need an additional variable, now with the delete button it wouldn't work
         const row = document.createElement("tr");
         document.getElementById('displayMessage').style.opacity = "0";
         for (let j = 0; j < 3; j++)
-        {
+        { //TODO: add this in another function for creating table cells
             let cellText;
 
             const cell = document.createElement("td");
-            const btn = document.createElement("button");
+            const btn = document.createElement("button"); // TODO: here you are creating the button 3 times and only adding it 1
             btn.innerHTML = "Remove";
             btn.classList.add("deleteButton");
-
+            // btn.addEventListener('click', () => row.remove()); delete function
             if(j===0)
                 cellText = document.createTextNode(firstName.value);
             else if(j===1)
@@ -62,7 +69,7 @@ function insertTable()
 
         tbl.appendChild(tblBody);
         document.body.appendChild(tbl);
-        tbl.setAttribute("border", "2");
+        tbl.setAttribute("border", "2"); // TODO: add a class for these styles
         tbl.setAttribute("cellspacing","0");
         tbl.setAttribute("cellpadding","10");
         document.getElementById("table").appendChild(tbl);
