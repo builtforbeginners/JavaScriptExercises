@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<article>
+    <section>
+        Make an api call to display a random Chuck Norris joke on the app. <br/>
+        Then call the categories api and list all the available categories on the app. <br/>
+        When a user selects a category, display the jokes for those categories. <br/>
+        Also, allow the user to search by text, when clicking the search button, make an api call and display the jokes from the response. <br/>
+        (Display info text if there are no jokes for that search term) <br/> <br/>
+        Use the following url: https://api.chucknorris.io <br/>
+    </section>
+</article>
+<article>
+
+    <section>
+        <h1>Chuck Norris Jokes App</h1>
+        <p>Radom joke:</p>
+        <p id="randomJoke"></p>
+    </section>
+
+    <section>
+        <h3>Choose a category</h3>
+        <select id="categories"></select>
+        <p id="categoryJoke"></p>
+    </section>
+
+    <section>
+        <h3>Search by text</h3>
+        <input onkeyup="getJokeByText(event)">
+        <ol id="searchJoke"></ol>
+    </section>
+
+</article>
+<script src="script.js"></script>
+</body>
+</html>
