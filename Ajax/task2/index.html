@@ -2,11 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-  <link rel="stylesheet" href="main.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <article>
+        <section>
+            Allow user to enter to do list items. <br/>
+            Store them in local storage and display them on refresh. <br/>
+            Allow the user to remove list items.  <br/>
+            Allow the user to check the list items.  <br/>
 
+            Display the text in green or add an icon to indicate that the item is
+            selected, can have multiple selected items.  <br/>
+            Filter them by done and not done items (selected and not selected)  <br/>
+        </section>
+        <section>
+            <h3>Enter a todo item</h3>
+            <input id="todoItem" onkeyup="disableAdd()">
+            <br/>
+            <button id="addTodo" onclick="addToDo()">Add</button>
+            <h1>Your to do list</h1>
+            <div id="tablearea"></div>
+
+        </section>
+    </article>
 <script src="script.js"></script>
 </body>
 </html>
