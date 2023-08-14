@@ -21,7 +21,6 @@
 
 
 
-
 /*
     Task 2
     Print the following format:
@@ -38,6 +37,11 @@
 //         {name:"Fiat", models:["500", "Panda"]}
 //     ]
 // }
+
+// console.log(Object.keys(myObj));
+// console.log(Object.entries(myObj));
+// console.log(Object.values(myObj));
+
 //
 // let print = ({name,age,cars}) => {
 //     console.log(`The owner ${name} of age ${age}, has the following cars:`);
@@ -150,8 +154,8 @@ with a discount applied
 Supposing the product's price is 5, calling the discount method with a discount of 15% (0.15) will return 4.25
 
 */
-
 /*
+
 
 var foodStoreProduct = {
     name: "Product1",
@@ -167,7 +171,7 @@ var foodStoreProduct = {
 }
 
 
-console.log(foodStoreProduct.print());
+foodStoreProduct.print();
 console.log(foodStoreProduct.productDiscount());
 
 */
@@ -265,3 +269,15 @@ function carSize(capacity) {
 };
 
 */
+
+// Се испраќа референца од низата
+let arr = [1,2,3];
+let newArr = arr;
+newArr[0]=0;
+console.log(arr, newArr);
+
+// Се испраќа копија од низата
+let arr1 = [1,2,3];
+let newArr1 = [...arr1];
+newArr1[0]=0;
+console.log(arr1, newArr1);
